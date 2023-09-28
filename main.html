@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>WASM Experiments</title>
+  </head>
+  <body>
+    <button id="mybutton">Run myFunction</button>
+    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript">
+        Module.onRuntimeInitialized = () => {
+            document.getElementById("mybutton").addEventListener("click", () => {
+                let result = Module._return_shit()
+                console.log(result)
+            });
+        }
+    </script>
+  </body>
+</html>
