@@ -39,7 +39,7 @@ jobs:
         run: |
           tar \
             --dereference --hard-dereference \
-            -czvf "$RUNNER_TEMP/github-pages.tar.gz" \
+            -cvf "$RUNNER_TEMP/github-pages.tar" \
             --exclude=.git \
             --exclude=.github \
             --exclude=main.cpp \
@@ -49,7 +49,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: github-pages
-          path: ${{ runner.temp }}/github-pages.tar.gz
+          path: ${{ runner.temp }}/github-pages.tar
           retention-days: 1
           if-no-files-found: error
       - name: Deploy to GitHub Pages
