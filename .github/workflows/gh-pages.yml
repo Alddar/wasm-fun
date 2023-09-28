@@ -39,7 +39,6 @@ jobs:
         run: |
           tar \
             --dereference --hard-dereference \
-            --directory "$INPUT_PATH" \
             -czvf "$RUNNER_TEMP/github-pages.tar.gz" \
             --exclude=.git \
             --exclude=.github \
