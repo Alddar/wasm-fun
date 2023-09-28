@@ -45,6 +45,13 @@ jobs:
             --exclude=main.cpp \
             --exclude=Makefile \
             .
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: github-pages
+          path: ${{ runner.temp }}/github-pages.tar.gz
+          retention-days: 1
+          if-no-files-found: error
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
