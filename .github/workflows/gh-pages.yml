@@ -42,6 +42,7 @@ jobs:
             -cvf "$RUNNER_TEMP/github-pages.tar" \
             --exclude=.git \
             --exclude=.github \
+            --exclude=.gitignore \
             --exclude=main.cpp \
             --exclude=Makefile \
             .
