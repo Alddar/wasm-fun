@@ -1,0 +1,1 @@
+This is a minimalist webassembly starter project with working GitHub actions.
